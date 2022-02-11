@@ -1,0 +1,20 @@
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid{
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 180px;
+    height: 180px;
+}
+
+.grid div{
+    height: 20px;
+    width: 20px;
+}
