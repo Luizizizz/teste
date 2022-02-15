@@ -62,10 +62,10 @@ body{
 }
 
 .navigation ul li.active a .icon{/*hover é quando a seta do mouse passa em cima do objeto, no caso do li*/
-    transform: translateY(-35px);
+    transform: translateY(-32px);
 }
 
-    .navigation ul li a .text{
+.navigation ul li a .text{
     position: absolute;
     color: var(--clr);
     font-weight: 400px;
@@ -73,19 +73,46 @@ body{
     letter-spacing: 0.05em;
     transition: 0.5s;
     opacity: 0;
-    transform: translateY(20px)
+    transform: translateY(20px);
     }
 
-    .navigation ul li.active a .text{
+.navigation ul li.active a .text{
         opacity: 1;
         transform: translateY(10px);
     }
-    .indicator{
+.indicator{
         position: absolute;
-        top: 50%;
+        top: -50%;
         width: 70px;
         height: 70px;
-        background-color: green;
+        background-color: #29fd53;
         border-radius: 50%;
         border: 6px solid var(--clr);
+        transition: 0.5s;
+    }
+
+    .indicator::before/*antes da caixinha, se fosse after seria dps*/
+    {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -23px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 0px -10px 0 0 var(--clr);
+    }
+
+    .indicator::after
+    {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -22px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: 0px -10px 0 0 var(--clr);
     }
